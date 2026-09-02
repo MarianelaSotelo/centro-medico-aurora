@@ -12,7 +12,7 @@ Hecho con HTML, CSS y JavaScript puros — sin frameworks, sin build, sin depend
 
 ## Demo
 
-**Ver el sitio:** _(pendiente de publicar)_
+**Ver el sitio:** https://marianelasotelo.github.io/centro-medico-aurora/
 
 Para entrar al sistema de turnos:
 
