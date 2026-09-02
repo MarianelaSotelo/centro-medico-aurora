@@ -1,0 +1,312 @@
+/* =========================================================
+   Centro Médico Aurora — Estilos de la app de turnos
+   ========================================================= */
+
+.icono-boton {
+    width: 17px;
+    height: 17px;
+}
+
+.pagina-turnos {
+    padding-block: clamp(44px, 6vw, 76px) clamp(60px, 8vw, 100px);
+    background-color: var(--fondo-menta);
+    background-image: radial-gradient(circle at 12% 0%, rgba(189, 237, 224, .55) 0%, transparent 42%),
+        radial-gradient(circle at 92% 8%, rgba(182, 184, 214, .4) 0%, transparent 40%);
+    min-height: 70vh;
+}
+
+/* ---------- Encabezado de la página ---------- */
+.turnos__intro {
+    max-width: 620px;
+    margin-bottom: 42px;
+}
+
+.turnos__intro h1 {
+    font-size: clamp(1.9rem, 1.4rem + 2vw, 2.8rem);
+}
+
+/* ---------- Tarjetas ---------- */
+.tarjeta-panel {
+    padding: clamp(26px, 3.5vw, 38px);
+    border: 1px solid var(--linea);
+    border-radius: var(--radio-lg);
+    background-color: #fff;
+    box-shadow: var(--sombra-md);
+}
+
+.tarjeta-panel--angosta {
+    max-width: 460px;
+}
+
+.panel__icono {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(140deg, var(--violeta), var(--violeta-hondo));
+    color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(111, 88, 201, .26);
+}
+
+.panel__icono--menta {
+    background: linear-gradient(140deg, var(--menta), var(--salvia));
+    color: var(--violeta-hondo);
+    box-shadow: none;
+}
+
+.panel__icono svg {
+    width: 23px;
+    height: 23px;
+}
+
+.tarjeta-panel h2 {
+    font-size: 1.4rem;
+}
+
+.panel__ayuda {
+    margin-top: 8px;
+    margin-bottom: 26px;
+    font-size: .93rem;
+    color: var(--apagado);
+}
+
+.panel__demo {
+    margin-top: 22px;
+    padding: 13px 16px;
+    border-radius: 11px;
+    background-color: var(--fondo-suave);
+    border: 1px dashed var(--lavanda);
+    font-size: .86rem;
+    color: var(--apagado);
+    text-align: center;
+}
+
+.panel__demo code {
+    padding: 2px 7px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid var(--linea);
+    font-family: "Consolas", "Menlo", monospace;
+    font-size: .88em;
+    color: var(--violeta-hondo);
+    font-weight: 600;
+}
+
+/* ---------- Grilla del panel ---------- */
+.turnos__grilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    align-items: start;
+}
+
+.panelOculto {
+    display: none;
+}
+
+/* ---------- Campos ---------- */
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: .87rem;
+    font-weight: 600;
+    color: var(--tinta);
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--linea);
+    border-radius: 11px;
+    background-color: #fff;
+    font-size: .96rem;
+    transition: border-color var(--transicion), box-shadow var(--transicion);
+}
+
+.campo input:hover,
+.campo select:hover {
+    border-color: var(--lavanda);
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: var(--violeta);
+    box-shadow: 0 0 0 3px rgba(126, 120, 210, .18);
+}
+
+.campo input::placeholder {
+    color: #A8A7B8;
+}
+
+.campo-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* ---------- Mensajes ---------- */
+.mensajeError {
+    margin-top: 12px;
+    color: #dc2626;
+    text-align: center;
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+/* ---------- Lista de turnos ---------- */
+.lista-turnos {
+    display: grid;
+    gap: 12px;
+}
+
+.turno {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 18px;
+    border: 1px solid var(--linea);
+    border-radius: var(--radio);
+    background-color: var(--fondo-suave);
+    animation: aparecer .3s ease;
+    transition: border-color var(--transicion), background-color var(--transicion);
+}
+
+.turno:hover {
+    border-color: var(--lavanda);
+    background-color: #fff;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+}
+
+.turno__hora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 92px;
+    padding: 11px 12px;
+    border-radius: 11px;
+    background: linear-gradient(140deg, var(--violeta), var(--violeta-hondo));
+    color: #fff;
+    text-align: center;
+}
+
+.turno__hora strong {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.1;
+}
+
+.turno__hora small {
+    font-size: .68rem;
+    opacity: .85;
+    text-transform: capitalize;
+    line-height: 1.3;
+    margin-top: 3px;
+}
+
+.turno__datos {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.turno__datos strong {
+    font-size: .99rem;
+    color: var(--tinta);
+}
+
+.turno__datos small {
+    font-size: .84rem;
+    color: var(--apagado);
+}
+
+.turno__cancelar {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border: 1px solid var(--linea);
+    border-radius: 10px;
+    background-color: #fff;
+    color: var(--apagado);
+    cursor: pointer;
+    padding: 0;
+    transition: color var(--transicion), border-color var(--transicion), background-color var(--transicion);
+}
+
+.turno__cancelar:hover {
+    color: #dc2626;
+    border-color: #f3b3b3;
+    background-color: #fef2f2;
+}
+
+.turno__cancelar:focus-visible {
+    outline: 3px solid var(--violeta);
+    outline-offset: 2px;
+}
+
+.turno__cancelar svg {
+    width: 17px;
+    height: 17px;
+}
+
+.turno-vacio {
+    padding: 34px 20px;
+    border: 1px dashed var(--lavanda);
+    border-radius: var(--radio);
+    text-align: center;
+    color: var(--apagado);
+    font-size: .94rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    .turnos__grilla {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .campo-doble {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .turno {
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+            "hora datos"
+            "boton boton";
+        row-gap: 12px;
+    }
+
+    .turno__hora {
+        grid-area: hora;
+    }
+
+    .turno__datos {
+        grid-area: datos;
+    }
+
+    .turno__cancelar {
+        grid-area: boton;
+        width: 100%;
+    }
+}

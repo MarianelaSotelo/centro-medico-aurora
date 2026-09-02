@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turnos web — Centro Médico Aurora</title>
+    <meta name="description"
+        content="Reservá tu turno online en el Centro Médico Aurora. Elegí especialidad, profesional y horario en menos de un minuto.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/turnos.css">
+</head>
+
+<body>
+    <!-- ===== Íconos SVG ===== -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="i-cruz" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M12 4v16M4 12h16" />
+        </symbol>
+        <symbol id="i-tel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m2 7 10 6 10-6" />
+        </symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
+            <circle cx="12" cy="10" r="3" />
+        </symbol>
+        <symbol id="i-reloj" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 7v5l3 2" />
+        </symbol>
+        <symbol id="i-candado" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="10" width="16" height="11" rx="2" />
+            <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+        </symbol>
+        <symbol id="i-calendario" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="16" rx="2" />
+            <path d="M3 10h18M8 3v4M16 3v4" />
+        </symbol>
+        <symbol id="i-tilde" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m4 12.5 5.2 5.2L20 7" />
+        </symbol>
+        <symbol id="i-atras" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M11 18l-6-6 6-6" />
+        </symbol>
+        <symbol id="i-tacho" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3" />
+        </symbol>
+        <symbol id="i-agenda" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="3" width="16" height="18" rx="2" />
+            <path d="M9 8h6M9 12h6M9 16h3" />
+        </symbol>
+    </svg>
+
+    <!-- ===== Barra superior ===== -->
+    <div class="barra-superior">
+        <div class="contenedor">
+            <div class="barra-superior__datos">
+                <a href="tel:+541155550142"><svg><use href="#i-tel" /></svg>(011) 5555-0142</a>
+                <a href="mailto:turnos@cmaurora.com.ar"><svg><use href="#i-mail" /></svg>turnos@cmaurora.com.ar</a>
+            </div>
+            <span class="barra-superior__horario">
+                <svg><use href="#i-reloj" /></svg>Lun a Vie 8 a 20 h · Sáb 9 a 13 h
+            </span>
+        </div>
+    </div>
+
+    <!-- ===== Header ===== -->
+    <header class="encabezado" id="encabezado">
+        <div class="contenedor">
+            <a class="logo" href="index.html" aria-label="Centro Médico Aurora — Inicio">
+                <span class="logo__marca"><svg><use href="#i-cruz" /></svg></span>
+                <span class="logo__texto">
+                    <span class="logo__nombre">Aurora</span>
+                    <span class="logo__sub">Centro Médico</span>
+                </span>
+            </a>
+
+            <nav class="navegacion" id="navegacion" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html#el-centro">El Centro</a></li>
+                    <li><a href="index.html#especialidades">Especialidades</a></li>
+                    <li><a href="index.html#estudios">Estudios</a></li>
+                    <li><a href="index.html#aranceles">Aranceles</a></li>
+                    <li><a href="index.html#equipo">Equipo</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="encabezado__acciones">
+                <a class="boton boton--fantasma" href="index.html">
+                    <svg class="icono-boton"><use href="#i-atras" /></svg>Volver al inicio
+                </a>
+                <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false"
+                    aria-controls="navegacion">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="pagina-turnos">
+        <div class="contenedor">
+
+            <!-- ===== Encabezado de la página ===== -->
+            <div class="turnos__intro">
+                <span class="sobretitulo">Turnos web</span>
+                <h1>Reservá tu turno online</h1>
+                <p class="bajada">
+                    Elegí especialidad, profesional, día y horario. La confirmación es inmediata
+                    y podés cancelar cuando quieras desde esta misma pantalla.
+                </p>
+            </div>
+
+            <!-- ===== LOGIN ===== -->
+            <section id="login" class="tarjeta-panel tarjeta-panel--angosta">
+                <span class="panel__icono"><svg><use href="#i-candado" /></svg></span>
+                <h2>Iniciar sesión</h2>
+                <p class="panel__ayuda">Ingresá con los datos que te dimos en el mostrador.</p>
+
+                <div class="campo">
+                    <label for="inputUsuario">Usuario</label>
+                    <input type="text" id="inputUsuario" placeholder="Tu nombre de usuario"
+                        autocomplete="username" />
+                </div>
+
+                <div class="campo">
+                    <label for="inputClave">Contraseña</label>
+                    <input type="password" id="inputClave" placeholder="••••••"
+                        autocomplete="current-password" />
+                </div>
+
+                <button id="botonLogin" class="boton boton--primario boton--bloque">Ingresar</button>
+                <p id="mensajeLogin" class="mensajeError"></p>
+
+                <p class="panel__demo">
+                    <strong>Demo:</strong> usuario <code>marianela</code> · contraseña <code>4444</code>
+                </p>
+            </section>
+
+            <!-- ===== PANEL PRINCIPAL ===== -->
+            <section id="panelPrincipal" class="panelOculto turnos__grilla">
+
+                <div class="tarjeta-panel">
+                    <span class="panel__icono"><svg><use href="#i-calendario" /></svg></span>
+                    <h2>Reservar un turno</h2>
+                    <p class="panel__ayuda">Los horarios que aparecen son los que el profesional tiene libres.</p>
+
+                    <form id="formTurno">
+                        <div class="campo">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" placeholder="Nombre y apellido" required />
+                        </div>
+
+                        <div class="campo">
+                            <label for="especialidad">Especialidad</label>
+                            <select id="especialidad" required>
+                                <option value="">-- Seleccioná una especialidad --</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="especialista">Profesional</label>
+                            <select id="especialista" required>
+                                <option value="">-- Seleccioná un especialista --</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-doble">
+                            <div class="campo">
+                                <label for="fecha">Fecha</label>
+                                <input type="date" id="fecha" required />
+                            </div>
+                            <div class="campo">
+                                <label for="horario">Horario</label>
+                                <select id="horario" required>
+                                    <option value="">-- Elegí un horario --</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="boton boton--primario boton--bloque">Reservar turno</button>
+                    </form>
+                </div>
+
+                <div class="tarjeta-panel">
+                    <span class="panel__icono panel__icono--menta"><svg><use href="#i-agenda" /></svg></span>
+                    <h2>Tus turnos</h2>
+                    <p class="panel__ayuda">Se guardan en este navegador, así los tenés cuando vuelvas.</p>
+                    <ul id="listaTurnos" class="lista-turnos"></ul>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie__grilla">
+                <div class="pie__acerca">
+                    <span class="logo">
+                        <span class="logo__marca"><svg><use href="#i-cruz" /></svg></span>
+                        <span class="logo__texto">
+                            <span class="logo__nombre">Aurora</span>
+                            <span class="logo__sub">Centro Médico</span>
+                        </span>
+                    </span>
+                    <p>Centro de atención ambulatoria de múltiples especialidades en el barrio de Núñez,
+                        Ciudad Autónoma de Buenos Aires.</p>
+                </div>
+
+                <div>
+                    <h4>Especialidades</h4>
+                    <ul>
+                        <li><a href="index.html#especialidades">Clínica Médica</a></li>
+                        <li><a href="index.html#especialidades">Cardiología</a></li>
+                        <li><a href="index.html#especialidades">Pediatría</a></li>
+                        <li><a href="index.html#especialidades">Ginecología</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Pacientes</h4>
+                    <ul>
+                        <li><a href="turnos.html">Turnos web</a></li>
+                        <li><a href="index.html#aranceles">Aranceles</a></li>
+                        <li><a href="index.html#estudios">Estudios</a></li>
+                        <li><a href="index.html#cobertura">Coberturas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contacto</h4>
+                    <ul class="pie__contacto">
+                        <li><svg><use href="#i-pin" /></svg><span>Av. del Libertador 7250,<br>Núñez, C1429 CABA</span>
+                        </li>
+                        <li><svg><use href="#i-tel" /></svg><a href="tel:+541155550142">(011) 5555-0142</a></li>
+                        <li><svg><use href="#i-mail" /></svg><a
+                                href="mailto:turnos@cmaurora.com.ar">turnos@cmaurora.com.ar</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pie__legal">
+                <span>© 2026 Centro Médico Aurora. Proyecto de demostración.</span>
+                <span>Diseño y desarrollo: Marianela Sotelo</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/turnos.js"></script>
+</body>
+
+</html>

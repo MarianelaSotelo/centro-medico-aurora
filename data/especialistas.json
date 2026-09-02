@@ -1,0 +1,83 @@
+[
+    {
+        "nombre": "Dra. Valiria Sotelo",
+        "especialidad": "Cirugía General",
+        "horarios": [
+            "09:00",
+            "10:30",
+            "12:00"
+        ]
+    },
+    {
+        "nombre": "Dr. Fernando Ledesma",
+        "especialidad": "Clínica Médica",
+        "horarios": [
+            "08:00",
+            "11:00",
+            "15:30"
+        ]
+    },
+    {
+        "nombre": "Dra. Camila Ferrer",
+        "especialidad": "Clínica Médica",
+        "horarios": [
+            "09:00",
+            "12:30",
+            "17:00"
+        ]
+    },
+    {
+        "nombre": "Lic. Victoria Ruiz",
+        "especialidad": "Vacunación",
+        "horarios": [
+            "10:00",
+            "13:20",
+            "16:00"
+        ]
+    },
+    {
+        "nombre": "Lic. Miranda Feimann",
+        "especialidad": "Pediatría",
+        "horarios": [
+            "10:00",
+            "13:00",
+            "14:50"
+        ]
+    },
+    {
+        "nombre": "Dr. Nicolás Arrieta",
+        "especialidad": "Pediatría",
+        "horarios": [
+            "08:00",
+            "15:00",
+            "16:40"
+        ]
+    },
+    {
+        "nombre": "Dr. Emiliano Paz",
+        "especialidad": "Cardiología",
+        "horarios": [
+            "08:30",
+            "10:00",
+            "16:30"
+        ]
+    },
+    {
+        "nombre": "Dra. Rocío Bilbao",
+        "especialidad": "Ginecología",
+        "horarios": [
+            "09:30",
+            "11:30",
+            "14:00"
+        ]
+    },
+    {
+        "nombre": "Dra. Ingrid Halvorsen",
+        "especialidad": "Odontología",
+        "horarios": [
+            "09:00",
+            "11:40",
+            "16:20"
+        ]
+    }
+]
