@@ -1,5 +1,7 @@
 # Centro Médico Aurora
 
+![Portada del sitio: hero de la landing con el CTA de reserva de turnos](docs/portada.jpg)
+
 Sitio web para un centro médico de atención ambulatoria: una **landing institucional** y un
 **sistema de turnos online** funcionando, conectados entre sí.
 
